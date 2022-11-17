@@ -1,18 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product index{% endblock %}
+{% block title %}Hello SearchController!{% endblock %}
 
 {% block body %}
-    {% if app.user %}
-        <h1 class='HomeTitle'>Nos produits</h1>
+    {% if app.request.method == 'POST' %}
         <div>
-        {{ render(controller(
-            'App\\Controller\\SearchController::searchBar'
-        )) }}
-        </div>
-            <div class='productContainer'>
+            {% if products | length == 0 %}
+                <h4>Aucun résulat pour votre recherche.</h4>
+            {% else %}
+                <h2 class="ResSearch">Vos résulats de recherche</h2>
                 {% for product in products %}
-                
                     <div class='card'>
                         <div class='card-img'>
                             <img src="{{ product.image }}"/>
@@ -29,15 +26,8 @@
 
                         <a class='card-show' href="{{ path('app_product_show', {'id': product.id}) }}">Voir produit</a>
                     </div>     
-                {% else %}
-                    <tr>
-                        <td colspan="7">no records found</td>
-                    </tr>
-               {% endfor %}
-            </div>
-    {% else %}
-
-        <div>Merci de vous connecter pour accceder a l'application</div>
-
+                {% endfor %}
+            {% endif %}
+        </div>
     {% endif %}
 {% endblock %}

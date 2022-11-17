@@ -17,7 +17,11 @@
     <body>
         <nav>
           <a href='{{path('app_product_index')}}'>Accueil</a>
-          <a href='{{ path('app_login') }}'>Mon compte</a>        
+          {% if app.user %}
+            <a href='{{ path('app_login') }}'>Mon compte</a>   
+          {% else %}
+            <a href='{{ path('app_login') }}'>Connexion</a>
+          {% endif %}
         </nav>
         {% block body %}{% endblock %}
     </body>
