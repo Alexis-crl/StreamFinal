@@ -102,3 +102,31 @@ nav a:hover{
     text-align: center;
     width: 100%;
 }
+
+.Search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+#form_query{
+    width: 500px;
+    height: 52px;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#form_recherche{
+    height: 32px;
+    width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#form_recherche:hover{
+    transform: scale(1.05);
+    border: 3px solid rgba(0, 0, 255, 0.467);
+}
