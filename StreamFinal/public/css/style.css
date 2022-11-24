@@ -130,3 +130,49 @@ nav a:hover{
     transform: scale(1.05);
     border: 3px solid rgba(0, 0, 255, 0.467);
 }
+
+
+.productTitle{
+    text-align: center;
+}
+
+.productShowContainer{
+    display: grid;
+    margin-top: 5%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+}
+
+.productContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productDescription{
+    padding: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 2px;
+}
+
+.btnSymfony{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-back{
+    text-decoration: none;
+    height: 52px;
+    width: 200px;
+    color: black;
+    margin-left: 15px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
