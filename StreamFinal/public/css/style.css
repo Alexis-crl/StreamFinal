@@ -176,3 +176,8 @@ nav a:hover{
     border: 1px solid black;
     border-radius: 10px;
 }
+
+.btn-back:hover{
+    transform: scale(1.05);
+    animation: 1s ease;
+}
