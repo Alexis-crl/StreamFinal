@@ -12,6 +12,7 @@
         </div>
 
         <div class='productContent'>
+            <h2 class='productDescription'>Description : </h2>
             <div class='productDescription'>{{product.description}}</div>
             <h2 class='productCategory'> Categorie produit : {{product.category}}</h2>
         </div>
@@ -19,6 +20,6 @@
     </div>
 
     <div class='btnSymfony'>
-        <a class='btn-back' href="{{ path('app_product_index') }}">back to list</a>
+        <a class='btn-back' href="{{ path('app_product_index') }}">Back to list</a>
     </div>
 {% endblock %}
