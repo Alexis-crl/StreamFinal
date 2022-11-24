@@ -136,6 +136,13 @@ nav a:hover{
     text-align: center;
 }
 
+.productImage{
+    border: 1px solid black;
+    width: min-content;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.17);
+}
+
 .productShowContainer{
     display: grid;
     margin-top: 5%;
@@ -147,8 +154,8 @@ nav a:hover{
 .productContent{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 75%;
 }
 
 
