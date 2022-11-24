@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*----------------------------------NAVBAR----------------------------*/
 nav{
     display: flex;
-    padding: 25px;
     width: 100%;
-    justify-content: center;
+    height: 64px;
+    background-color: rgba(128, 128, 128, 0.234);
 }
 
 nav a{
@@ -21,26 +23,62 @@ nav a{
 nav a:hover{
     transform: scale(1.10);
     text-decoration: underline;
+    animation: 1s ease;
 }
 
+/* -----------------------------SIGN IN ------------------------------*/
+
 .SignInContainer{
-    display: flex;
-    width: 80%;
-    height: 60vh;
-    align-items: center;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+    height: 80vh;
 }
 
 .StreamTitle{
     display: flex;
     align-items: center;
     font-size: 72px;
+    justify-content: center;
 }
 
+
+.SignIn{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.426);
+}
+
+.SignIn input{
+    width: 75%;
+    height: 48px;
+    border-radius: 7px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.284);
+    text-align: center;
+}
+
+.SignIn label{
+    margin-top: 5%;
+    font-size: 24px;
+}
+
+
+
+
+/*----------------------------- PRODUCT ------------------------------------*/
 
 .HomeTitle{
     text-align: center;
     font-size: 52px;
+    margin-top: 3%;
 }
 
 .productContainer{
@@ -132,8 +170,11 @@ nav a:hover{
 }
 
 
+/*------------------------------------PRODUCT SHOW ----------------------------*/
+
 .productTitle{
     text-align: center;
+    margin-top: 2%;
 }
 
 .productImage{
@@ -183,6 +224,7 @@ nav a:hover{
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
+    margin-top: 2%;
 }
 
 .btn:hover{
@@ -190,8 +232,11 @@ nav a:hover{
     animation: 1s ease;
 }
 
+
+/*-------------------------------LOGOUT---------------------------------*/
 .logoutContainer{
     display: flex;
     flex-direction: column;
+    padding: 25px;
 }
 
