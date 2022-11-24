@@ -48,7 +48,7 @@ nav a:hover{
     grid-template-columns: repeat(auto-fill, 300px);
     width: 100%;
     grid-gap: 40px;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 .card{
@@ -80,7 +80,7 @@ nav a:hover{
 }
 
 .card-img img{
-    width: 50%;
+    width: 100px;
 }
 
 .card-show{
@@ -106,6 +106,7 @@ nav a:hover{
 .Search{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 5%;
 }
@@ -128,7 +129,6 @@ nav a:hover{
 
 #form_recherche:hover{
     transform: scale(1.05);
-    border: 3px solid rgba(0, 0, 255, 0.467);
 }
 
 
@@ -173,7 +173,7 @@ nav a:hover{
     text-align: center;
 }
 
-.btn-back{
+.btn{
     text-decoration: none;
     height: 52px;
     width: 200px;
@@ -182,9 +182,16 @@ nav a:hover{
     padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
+    text-align: center;
 }
 
-.btn-back:hover{
+.btn:hover{
     transform: scale(1.05);
     animation: 1s ease;
 }
+
+.logoutContainer{
+    display: flex;
+    flex-direction: column;
+}
+
