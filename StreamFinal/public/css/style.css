@@ -125,3 +125,10 @@ nav a:hover{
     transform: scale(1.05);
     border: 3px solid rgba(0, 0, 255, 0.467);
 }
+
+
+/********************************Calendar***************************************/
+
+#calendar{
+    width: 80%;
+}
