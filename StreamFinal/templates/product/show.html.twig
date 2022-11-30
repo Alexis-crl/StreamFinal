@@ -7,18 +7,28 @@
 
     <div class='productShowContainer'>
 
-        <div class='productImage'>
-            <img src='{{product.image}}'/>
-        </div>
+    <a href="{{ path('app_product_index') }}">back to list</a>
 
-        <div class='productContent'>
-            <div class='productDescription'>{{product.description}}</div>
-            <h2 class='productCategory'> Categorie produit :{{product.category}}</h2>
-        </div>
+    {{ product.start ? product.start|date('Y-m-d H:i:s') : '' }}
+
+    <div id='calendar'></div>
+
+
+
     
-    </div>
+{% endblock %}
 
-    <div class='btnSymfony'>
-        <a class='btn' href="{{ path('app_product_index') }}">back to list</a>
-    </div>
+{% block javascripts %}
+    <script>
+        window.onload = () =>{
+            let calendarElt = document.querySelector('#calendar')
+
+            let calendar = new FullCalendar.Calendar(calendarElt, {
+                initialView: 'dayGridMonth', 
+                locale: 'fr'
+                events: {{data|raw}}
+            });
+            calendar.render();
+        }
+    </script>
 {% endblock %}
