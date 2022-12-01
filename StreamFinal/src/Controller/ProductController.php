@@ -43,21 +43,15 @@ class ProductController extends AbstractController
 
 
 
-        $events = $productRepository->findAll;
+        $date_start = '';
         $rdvs = [];
-
-        foreach($events as $event){
-            $rdvs[] = [
-                'start' => $event -> getStart()->format('Y-m-d H:i:s'),
-                'end' => $event -> getEnd()->format('Y-m-d H:i:s')
-            ];
-        }
 
         $data = json_encode($rdvs);
 
         return $this->renderForm('product/edit.html.twig', [
             'product' => $product,
             'form' => $form,
+            'data' => $data,
         ]);
 
         
