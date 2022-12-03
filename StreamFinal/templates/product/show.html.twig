@@ -5,6 +5,8 @@
 {% block body %}
     <h1 class='productTitle'>{{ product.name }}</h1>
 
+    <h1 class='productTitle'>{{ product.description }}</h1>
+
     <div class='productShowContainer'>
 
     <a href="{{ path('app_product_index') }}">back to list</a>
@@ -25,8 +27,7 @@
 
             let calendar = new FullCalendar.Calendar(calendarElt, {
                 initialView: 'dayGridMonth', 
-                locale: 'fr'
-                events: {{data|raw}}
+                locale: 'fr',
             });
             calendar.render();
         }
