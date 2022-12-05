@@ -3,14 +3,24 @@
 {% block title %}Product{% endblock %}
 
 {% block body %}
-    <h1 class='productTitle'>{{ product.name }}</h1>
+     <h1 class='productTitle'>{{ product.name }}</h1>
 
     <div class='productShowContainer'>
         <img src='{{ product.image }}'/>
         <div>{{ product.description }}</div>
     </div>
 
-    <a href="{{ path('app_product_index') }}">back to list</a>
+        <div class='productImage'>
+            <img src='{{product.image}}'/>
+        </div>
+
+        <div class='productContent'>
+            <h2 class='productDescription'>Description : </h2>
+            <div class='productDescription'>{{product.description}}</div>
+            <h2 class='productCategory'> Categorie produit : {{product.category}}</h2>
+        </div>
+    
+    </div>
 
 {% endblock %}
 
