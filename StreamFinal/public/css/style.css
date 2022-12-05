@@ -5,6 +5,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+a{
+    color : black;
+}
+
 /*----------------------------------NAVBAR----------------------------*/
 nav{
     display: flex;
@@ -240,3 +244,10 @@ nav a:hover{
     padding: 25px;
 }
 
+/*********************************CALENDAR******************************************************/
+
+#calendar{
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+}

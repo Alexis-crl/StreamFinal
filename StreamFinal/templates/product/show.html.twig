@@ -6,29 +6,11 @@
     <h1 class='productTitle'>{{ product.name }}</h1>
 
     <div class='productShowContainer'>
+        <img src='{{ product.image }}'/>
+        <div>{{ product.description }}</div>
+    </div>
 
     <a href="{{ path('app_product_index') }}">back to list</a>
 
-    {{ product.start ? product.start|date('Y-m-d H:i:s') : '' }}
-
-    <div id='calendar'></div>
-
-
-
-    
 {% endblock %}
 
-{% block javascripts %}
-    <script>
-        window.onload = () =>{
-            let calendarElt = document.querySelector('#calendar')
-
-            let calendar = new FullCalendar.Calendar(calendarElt, {
-                initialView: 'dayGridMonth', 
-                locale: 'fr'
-                events: {{data|raw}}
-            });
-            calendar.render();
-        }
-    </script>
-{% endblock %}

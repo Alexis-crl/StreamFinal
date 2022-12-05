@@ -42,16 +42,9 @@ class ProductController extends AbstractController
         }
 
 
-
-        $date_start = '';
-        $rdvs = [];
-
-        $data = json_encode($rdvs);
-
         return $this->renderForm('product/edit.html.twig', [
             'product' => $product,
             'form' => $form,
-            'data' => $data,
         ]);
 
         
