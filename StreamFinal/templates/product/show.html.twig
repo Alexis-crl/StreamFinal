@@ -6,8 +6,6 @@
      <h1 class='productTitle'>{{ product.name }}</h1>
 
     <div class='productShowContainer'>
-        <img src='{{ product.image }}'/>
-        <div>{{ product.description }}</div>
     </div>
 
         <div class='productImage'>
@@ -21,6 +19,25 @@
         </div>
     
     </div>
+
+    <div id='calendar'></div>
+
+    {% block javascript %}
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+                });
+                calendar.render();
+            });
+
+    </script>
+
+
+    {% endblock %}
 
 {% endblock %}
 
